@@ -114,7 +114,7 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
 
 	@Override
 	protected boolean isReadyForPullEnd() {
-		float exactContentHeight = FloatMath.floor(mRefreshableView.getContentHeight() * mRefreshableView.getScale());
+		float exactContentHeight = Math.floor(mRefreshableView.getContentHeight() * mRefreshableView.getScale());
 		return mRefreshableView.getScrollY() >= (exactContentHeight - mRefreshableView.getHeight());
 	}
 
